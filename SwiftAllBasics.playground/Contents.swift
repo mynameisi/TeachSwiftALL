@@ -34,7 +34,7 @@ import UIKit
 
 //创建一个一维数组a1
 // 1 2 3
-var arr:[Int]=[1,2,3]
+//var arr:[Int]=[1,2,3]
 // 打印出这个数组的内容
 //print(arr)
 // 用for循环这个数组的内容
@@ -166,14 +166,15 @@ var arr:[Int]=[1,2,3]
 
 //写一个方法 setRed(rgba:Int, red:Int) 
 //把红色阶存入到rgba中
-var black=0x000000FF
-func setRed(x:Int,y:Int)->Int{
-    return (x&0x00FFFFFF)|(y<<24)
-}
-var red:Int=setRed(black, y: 255)
+//var black=0x000000FF
+//func setRed(x:Int,_ y:Int)->Int{
+//    return (x&0x00FFFFFF)|(y<<24)
+//}
+//var red=setRed(black,255)
 
 
 //写一个方法getGreen 返回rgba的绿色阶
+//  00 FF
 //func getGreen(rgba:Int)->Int{
 //    return (rgba&0x00FF0000)>>16
 //}
@@ -187,7 +188,7 @@ var red:Int=setRed(black, y: 255)
 //i==2, 打印 阴天
 //i==3, 打印 下雨
 //其他,  打印 雾霾
-//var pm=80
+//var pm=50
 //switch pm{
 //case 0...50:
 //    print("良好")
@@ -205,7 +206,7 @@ var red:Int=setRed(black, y: 255)
 //写一个switch实现
 //rgba表示白色, 就返回白
 //rgba表示红色, 就返回红
-//rgba表示绿色, 就返回蓝色, 黑色, 就返回绿, 蓝, 黑
+//rgba表示绿色, 就返回绿色, 黑色, 就返回绿, 蓝, 黑
 //其他，就返回: 无
 
 
@@ -216,6 +217,7 @@ var red:Int=setRed(black, y: 255)
 //定义一个People类
 //属性:name
 //行为: eat(food), sleep(bed)
+
 
 
 //创建一个人类People使得var zs=People("张三")
@@ -231,16 +233,19 @@ var red:Int=setRed(black, y: 255)
 //创建一个一维数组a3, 并把数组的内容打印出来
 // 张三 李四 王五
 //var a3=[People("ZS"), People("LS"), People("WW")]
+
 //创建一个二维数组a4, 并把数组的内容打印出来
 // 张三 李四
 // 王五 赵六
 // 田七 郭八
+
 //创建一个二维数组，让他表示如下颜色矩阵
 //白 黑 白
 //黑 白 黑
 //白 黑 白
+
 //var bs=0xFFFFFFFF;
-//var hs=0x00000000;
+//var hs=0x000000FF;
 //var a5=[
 //    [bs, hs, bs],
 //    [hs, bs, hs],
@@ -260,7 +265,7 @@ var red:Int=setRed(black, y: 255)
 //setRed(Int), setGreen(Int), setBlue(Int) 把RGB的色阶保存到rgba里面去
 //setRGB(Int, Int, Int) 把RGB的色阶一次性的保存到rgba里面去
 //getColor()->String 返回 黑、白、红、绿、蓝、无 分别是rgba当前代表的颜色
-class Pixel{
+//class Pixel{
 //    var rgba=0
 //    init(_ n:Int){
 //        rgba=n
@@ -284,7 +289,7 @@ class Pixel{
 //            return "无"
 //        }
 //    }
-}
+//}
 
 
 //创建一个类SimpleImage
