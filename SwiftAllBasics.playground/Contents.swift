@@ -20,18 +20,21 @@ import UIKit
 //创建出来所有的基本数据类型
 //整数
 //var i:Int=2
+//var i=2
 //单精度小数
 //var j:Float=3.14
+//var j=3.14
 //双精度小数
 //var k:Double=2.14
 //字母
+//var c:Character="a"
 //var c:Character="a"
 //布尔
 //var b:Bool=true
 
 //创建一个一维数组a1
 // 1 2 3
-//var arr:[Int]=[1,2,3]
+var arr:[Int]=[1,2,3]
 // 打印出这个数组的内容
 //print(arr)
 // 用for循环这个数组的内容
@@ -43,30 +46,46 @@ import UIKit
 //}
 //给这个一维数组加一个4
 //arr.append(4)
+//arr.append(5)
+//arr.append(6)
 
 
-//创建一个二维数组a2:
+//创建一个二维数组a2:矩阵
 // 1 2 3
 // 4 5 6
 // 7 8 9
-//var a2=[[1,2,3],[4,5,6],[7,8,9]]
+//var a2=[
+//    [1,2,3],
+//    [4,5,6],
+//    [7,8,9]
+//]
 //打印出这个数组的内容
 //print(a2)
 //循环打印出这个数组的内容
+
 //for i in 0..<a2.count{
 //    for j in 0..<a2[i].count{
 //        print(a2[i][j], terminator: " ")
 //    }
 //    print("")
 //}
+
 //把a2放到一个一维数组a1中
+//var a2=[
+//    [1,2,3],
+//    [4,5,6],
+//    [7,8,9]
+//]
+//
+//
 //var a1=[Int]()
 //for x in a2{
 //    for y in x{
-//        a1.append(y)
+//        a1=a1+[y]
 //    }
 //}
 //循环a1并打印出a2的内容
+//[1,2,3,4,5,6,7,8,9]
 //for i in 0..<3{
 //    for j in 0..<3{
 //        print(a1[i*3+j], terminator: " ")
@@ -76,7 +95,7 @@ import UIKit
 
 
 //x=2
-//f(x)=2x+3
+//f(x)=2x2+3=7
 //g(x)=4x-5
 //m(x)=f(x)+g(x)
 //把以上内容用函数表达出来
@@ -94,7 +113,8 @@ import UIKit
 
 
 //用一个整数表示白色
-//var i=0xFFFFFFFF;
+//var i:Int=0xFFFFFFFF
+//var j:Int=2
 //从左->右
 //FF -> 红 255
 //FF -> 绿 255
@@ -102,7 +122,7 @@ import UIKit
 //FF -> 透明 255
 
 //用一个整数表示黑色
-//var i=0x000000F
+//var i=0x000000FF
 //从左->右
 //00 -> 红 0
 //00 -> 绿 0
@@ -111,6 +131,7 @@ import UIKit
 
 //用一个整数表示红色
 //用一个整数表示绿色
+//var green:Int=0x00FF00FF
 //用一个整数表示蓝色
 //获得红色整数中的红色阶
 //var i=0xFF0000FF //R255 G0 B0 A255 表示不透明的红色
@@ -120,11 +141,13 @@ import UIKit
 
 //0xFFFF00FF的蓝色阶部分变成255
 //var i=0xFFFF00FF
-//i=i|(255<<8)
+//i=i|(0xFF<<8)
+//i=0xFFFFFFFF
 
 //任何一个数的蓝色阶部分变成255
 //var i=0xFFFF23FF
 //i=(i&0xFFFF00FF)|(255<<8)
+//i=i|(255<<8)
 
 //写一个if判断一个整数表示的是白色还是黑色
 //var i=0xFFFFFFFF
@@ -141,12 +164,13 @@ import UIKit
 //black=(black&0xFFFF00FF)|(0x00<<8)
 
 
-//写一个方法 setRed(rgba:Int, red:Int) 把红色阶存入到rgba中
-//var black=0x00000000
-//func setRed(x:Int,y:Int)->Int{
-//    return (x&0x00FFFFFF)|(y<<24)
-//}
-//var red:Int=setRed(black, y: 255)
+//写一个方法 setRed(rgba:Int, red:Int) 
+//把红色阶存入到rgba中
+var black=0x000000FF
+func setRed(x:Int,y:Int)->Int{
+    return (x&0x00FFFFFF)|(y<<24)
+}
+var red:Int=setRed(black, y: 255)
 
 
 //写一个方法getGreen 返回rgba的绿色阶
